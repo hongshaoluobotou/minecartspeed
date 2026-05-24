@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "com.khankhulun.minecartspeed.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"AbstractMinecartMixin"
+	],
+	"client": [
+		"client.MouseHandlerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

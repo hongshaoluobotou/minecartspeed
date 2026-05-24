@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "minecartspeed",
+	"version": "${version}",
+	"name": "MinecartSpeed",
+	"description": "Players can use the mouse wheel or commands to change the top speed of the minecart they are riding or the minecarts specified within a batch range.",
+	"authors": [
+		"KhanKhulun、hongshaoluobotou"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/ukhankhulun/minecartspeed-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/minecartspeed/icon128.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.khankhulun.minecartspeed.MinecartSpeedMod"
+		]
+	},
+	"mixins": [
+		"minecartspeed.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.2-",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
