@@ -1,106 +1,163 @@
-# 🛒 MinecartSpeed
+# 🚄 MinecartSpeed
 
-[![License](https://img.shields.io/badge/License-CC0--1.0-green.svg)](LICENSE)
-[![Minecraft](https://img.shields.io/badge/Minecraft-26.2-blue.svg)](https://minecraft.net)
-[![Fabric](https://img.shields.io/badge/Mod%20Loader-Fabric-yellow.svg)](https://fabricmc.net)
-[![Java](https://img.shields.io/badge/Java-25-red.svg)](https://adoptium.net)
-
-
-<p align="">
-  <img src="./src/main/resources/assets/minecartspeed/icon1.png" alt="新工具" width="300">
+<p align="center">
+  <img src="./src/main/resources/assets/minecartspeed/icon1.png" alt="MinecartSpeed Logo" width="220">
 </p>
 
-一个 **Fabric** 模组，允许玩家通过**鼠标滚轮**或**命令**动态调整矿车的最大速度。
+<p align="center">
+  A modern <b>Fabric</b> mod that allows players to dynamically adjust minecart speed using the mouse wheel or commands.
+</p>
+
+<p align="center">
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-CC0--1.0-green.svg" alt="License">
+  </a>
+  <a href="https://minecraft.net">
+    <img src="https://img.shields.io/badge/Minecraft-26.2--snapshot8-blue.svg" alt="Minecraft">
+  </a>
+  <a href="https://fabricmc.net">
+    <img src="https://img.shields.io/badge/Loader-Fabric-orange.svg" alt="Fabric">
+  </a>
+  <a href="https://adoptium.net">
+    <img src="https://img.shields.io/badge/Java-25-red.svg" alt="Java">
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="README_zh.md">简体中文</a> | English
+</p>
+
 ---
+
+## ✨ Features
+
+- 🖱️ **Mouse Wheel Adjustment**  
+  Scroll the mouse wheel while riding a minecart to dynamically change its maximum speed.
+
+- ⌨️ **Command Support**  
+  Use `/minecartspeed` commands for precise speed control.
+
+- 💾 **Persistent Storage**  
+  Minecart speed settings are saved with the world and persist after restarting the game.
+
+- 🌐 **Client-Server Synchronization**  
+  Mouse wheel actions are synchronized to the server using Fabric networking.
+
+- 🎯 **Customizable Speed Range**  
+  Adjustable from `0.1` to `10.0` (default: `0.4`).
+
 ---
 
-## ✨ 功能
+## 📋 Commands
 
-- 🖱️ **鼠标滚轮调节** — 坐在矿车上时，滚动鼠标滚轮即可实时调整矿车最大速度（步长 0.1）
-- ⌨️ **命令控制** — 通过 `/minecartspeed` 命令精确获取、设置或调整矿车速度
-- 💾 **持久化存储** — 矿车的速度设置会随世界保存，重新进入游戏依然生效
-- 🌐 **客户端-服务端同步** — 滚轮操作通过 Fabric 网络包同步至服务端
-- 🎯 **速度范围** — `0.1` ~ `10.0`（默认值 `0.4`）
-
----
-
-## 📋 命令
-
-| 命令 | 说明 |
+| Command | Description |
 |---|---|
-| `/minecartspeed get` | 查看自己所骑矿车的最大速度 |
-| `/minecartspeed get <玩家>` | 查看指定玩家所骑矿车的最大速度 |
-| `/minecartspeed set <速度>` | 设置自己所骑矿车的最大速度 |
-| `/minecartspeed set <速度> <玩家>` | 设置指定玩家所骑矿车的最大速度 |
-| `/minecartspeed add <增量>` | 在现有速度基础上增加/减少（支持负数） |
-| `/minecartspeed add <增量> <玩家>` | 对指定玩家的矿车速度进行增减 |
+| `/minecartspeed get` | Get the max speed of your current minecart |
+| `/minecartspeed get <player>` | Get another player's minecart speed |
+| `/minecartspeed set <speed>` | Set your minecart speed |
+| `/minecartspeed set <speed> <player>` | Set another player's minecart speed |
+| `/minecartspeed add <value>` | Increase or decrease speed |
+| `/minecartspeed add <value> <player>` | Modify another player's minecart speed |
 
-> 💡 速度范围为 `0.1` ~ `10.0`，超出范围会自动限制到边界值。
+> 💡 Speed values are automatically clamped between `0.1` and `10.0`.
 
 ---
 
-## 🎮 使用方法
+## 🎮 Usage
 
-1. 坐上任意矿车
-2. **向上滚动**鼠标滚轮 → 增加最大速度
-3. **向下滚动**鼠标滚轮 → 减少最大速度
-4. 屏幕上方会实时显示当前矿车最大速度
+1. Ride any minecart
+2. Scroll **up** to increase speed
+3. Scroll **down** to decrease speed
+4. Current speed is displayed in real time on screen
 
-或者使用命令进行精确控制：
+### Example Commands
 
 ```mcfunction
-# 查看当前速度
+# Get current speed
 /minecartspeed get
 
-# 设置为 2.5
+# Set speed to 2.5
 /minecartspeed set 2.5
 
-# 增加 0.5
+# Increase speed by 0.5
 /minecartspeed add 0.5
 ```
 
 ---
 
-## 🔧 安装
+## 📦 Installation
 
-| 依赖 | 版本要求                                  |
-|---|---------------------------------------|
-| Minecraft | `~26.2-` `注：此仓库内的文件版本是26.2-snapshot8` |
-| Fabric Loader | `>= 0.19.2`                           |
-| Fabric API | `*`                                   |
-| Java | `>= 25`                               |
+| Dependency | Requirement |
+|---|---|
+| Minecraft | `26.2-snapshot-8` *(Other supported versions may be available in Releases)* |
+| Fabric Loader | `>= 0.19.2` |
+| Fabric API | Latest |
+| Java | `>= 25` |
 
-1. 安装 [Fabric Loader](https://fabricmc.net/use/)
-2. 下载 [Fabric API](https://modrinth.com/mod/fabric-api)
-3. 将本模组的 `.jar` 文件和 Fabric API 放入 `.minecraft/mods/` 目录
-4. 启动游戏 🚀
+### Steps
+
+1. Install [Fabric Loader](https://fabricmc.net/use/)
+2. Download [Fabric API](https://modrinth.com/mod/fabric-api)
+3. Place both the mod `.jar` file and Fabric API into your `.minecraft/mods/` folder
+4. Launch Minecraft 🚀
 
 ---
 
-## 🏗️ 构建
+## ⚠ Snapshot Compatibility
+
+This mod is currently developed for Minecraft snapshots.  
+APIs and internal Minecraft code may change frequently between versions.
+
+---
+
+## 🏗️ Building
 
 ```bash
 ./gradlew build
 ```
 
-构建产物位于 `build/libs/` 目录。
+Build artifacts will be generated in:
+
+```text
+build/libs/
+```
 
 ---
 
-## 👥 作者
+## 🗺 Roadmap
+
+- [x] Dynamic minecart speed control
+- [x] Mouse wheel adjustment
+- [x] Command support
+- [x] Persistent storage
+- [ ] Config GUI
+- [ ] Per-world configuration
+- [ ] Dedicated server config sync
+- [ ] NeoForge or others support
+
+---
+
+## 👥 Authors
 
 - **ukhankhulun**
 - **hongshaoluobotou**
 
 ---
 
-## 📄 许可证
+## 📄 License
 
-本项目采用 [CC0-1.0](LICENSE) 许可证 — 可自由使用、修改和分发。
+This project is licensed under the [CC0-1.0](LICENSE) license.  
+Feel free to use, modify, and distribute it freely.
 
 ---
 
-## 🔗 链接
+## 🔗 Links
 
-- [GitHub 仓库](https://github.com/ukhankhulun/minecartspeed-mod)
-- [Fabric 文档](https://docs.fabricmc.net)
+- GitHub Repository  
+  https://github.com/ukhankhulun/minecartspeed
+
+- Fabric Documentation  
+  https://docs.fabricmc.net
+
+---
