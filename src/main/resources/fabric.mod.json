@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/ukhankhulun/minecartspeed-mod"
+		"sources": "https://github.com/ukhankhulun/minecartspeed"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/minecartspeed/icon128.png",
