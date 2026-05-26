@@ -1,7 +1,7 @@
 # 🚄 MinecartSpeed
 
 <p align="center">
-  <img src="./src/main/resources/assets/minecartspeed/icon1.png" alt="MinecartSpeed Logo" width="220">
+  <img src="./pictures/image.png" alt="MinecartSpeed Logo" width="1627">
 </p>
 
 <p align="center">
