@@ -3,6 +3,9 @@
 <p align="center">
   <img src="./src/main/resources/assets/minecartspeed/icon1.png" alt="MinecartSpeed Logo" width="220">
 </p>
+<p align="center">
+  <img src="./pictures/image.png" alt="MinecartSpeed Logo" width="1627">
+</p>
 
 <p align="center">
   一个现代化 <b>Fabric</b> 模组，允许玩家通过鼠标滚轮或命令动态调整矿车最大速度。
