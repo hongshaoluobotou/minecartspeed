@@ -125,6 +125,18 @@ build/libs/
 
 ---
 
+## 🌐 Installation Requirements
+
+| Environment | Required |
+|---|---|
+| Client | ✅ Required |
+| Server | ✅ Recommended |
+
+> Full functionality requires both the client and server to have the mod installed.  
+> If installed only on the server, command features will still work, but mouse wheel speed control and HUD display will be unavailable.
+
+---
+
 ## 🗺 Roadmap
 
 - [x] Dynamic minecart speed control
