@@ -170,4 +170,7 @@ build/libs/
 - Fabric 官方文档  
   https://docs.fabricmc.net
 
+- Modrinth  
+  https://modrinth.com/mod/minecartspeed-mod
+
 ---

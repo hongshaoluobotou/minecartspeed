@@ -172,4 +172,7 @@ Feel free to use, modify, and distribute it freely.
 - Fabric Documentation  
   https://docs.fabricmc.net
 
+- Modrinth  
+  https://modrinth.com/mod/minecartspeed-mod
+
 ---
